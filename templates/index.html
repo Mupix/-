@@ -50,6 +50,28 @@
     </form>
   </template>
 
+  <template id="edit-dialog">
+    <form id="edit-form">
+      <h3>商品を編集</h3>
+      <label>商品名<br><input name="name" required></label><br>
+      <label>商品URL<br><input name="url" required></label><br>
+      <label>ショップ（任意）<br><input name="shop"></label><br>
+      <label>取得間隔（分）<br>
+        <select name="check_interval_minutes">
+          <option value="60">1時間</option>
+          <option value="15">15分</option>
+          <option value="30">30分</option>
+          <option value="180">3時間</option>
+          <option value="360">6時間</option>
+          <option value="720">12時間</option>
+          <option value="1440">24時間</option>
+        </select>
+      </label><br>
+      <button type="submit">保存</button>
+      <button type="button" id="cancel-edit">キャンセル</button>
+    </form>
+  </template>
+
   <script src="/static/js/app.js"></script>
 </body>
 </html>
